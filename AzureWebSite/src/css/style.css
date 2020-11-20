@@ -1,0 +1,267 @@
+/* 
+Milestone-1 
+ver. 1 
+Joshua W., Noah R., Brydon J.
+
+* styling for index.html
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body, html{
+  overflow-y: scroll;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:white;
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -75px;
+}
+
+/*Home Page Section*/
+header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #33A8C7;
+  width: 100%;
+  color: white;
+}
+
+  #header-title{
+    text-align: left;
+    min-width: 275px;
+    margin-top: 5px;
+    color: white;
+  }
+
+  #header-subtitles{
+    display: flex;
+    justify-content: end;
+  }
+  
+  #header-subtitles a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-btn{
+    background-color: #F77976;
+    padding: 10px;
+    min-width: 40px;
+    text-align: center;
+    border: 3px solid #F77976;
+  }
+
+  .nav-btn:hover{
+    border: 3px solid white;
+  }
+
+    #header-buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+      .btn {
+        width: 50px;
+        height: 50px;
+        border: #9336FD solid 2px;
+        background-color: white;
+        border-radius: 25px;
+        margin-left: 10px;
+      } 
+
+        #night-btn{
+          border: white solid 2px;
+        }
+
+
+/*The Main Body Sections*/
+#body-title{
+  text-align: center;
+  margin: 7% auto;
+  width: fit-content;
+  color: white;
+  border: white solid 2px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #F77976;
+}
+
+#content{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 20px 40px 20px;
+}
+
+
+
+  .box{
+    flex: 1 1 300px;
+    text-align: left;
+    color: #4a5667;
+    border: #4a5667 solid 3px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    max-width: 500px;
+    margin: 2px;
+  }
+
+  .blog_category_box{
+    width: 300px;
+  }
+
+    #art-posts-box{
+      background: linear-gradient(to bottom right, white, #F77976);
+    }
+
+    #science-posts-box{
+      background: linear-gradient(to bottom right, white, #ffaa00b9);
+    }
+
+    #business-posts-box{
+      background: linear-gradient(to bottom right, white, #52e3e1b4);
+    }
+
+    #travel-posts-box{
+      background: linear-gradient(to bottom right, white, #9336fdaf);
+    }
+
+  .list-items{
+    list-style: none;
+    color:  #4a5667;
+    border:  #4a5667 solid 2px;
+    background-color:gainsboro;
+    border-radius: 10px;
+    padding: 2px;
+    margin-right: 10px;
+  }
+
+  .list-items a{
+    text-decoration: none;
+  }
+
+  #tm-box .box-list li:hover{
+    background-color: white;
+    border-color: #F94144;
+  }
+
+  #tm-box .box-list li:active{
+    box-shadow: inset 1px 1px 2px ;
+  }
+
+  .box-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+    #box-title{
+      border-bottom: white solid 1px;
+      border-top: white solid 1px;
+      border-radius: 15px;
+      width: fit-content;
+      margin: auto;
+      padding: 5px;
+    }
+
+      #tm-box, #tool-box, #goal-box{
+        height: 200px;
+        transition: width .2s, border 0.2s, height .2s, background-color .2s;
+      }
+
+      #tm-box:hover, #tool-box:hover, #goal-box:hover{
+        border: #F94144 solid 3px;
+        height: 180px;
+      }
+
+  .footer, .push{
+    height: 75px;
+  }
+
+  .footer{
+    background-color: #33A8C7;
+  }
+  
+
+/*Sign-Up Page Section*/
+img.displayed {
+  border-radius: 15px;
+}
+
+hr{
+  width: 250px;
+}
+
+select{
+  width: 177px;
+}
+
+#top{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 80%;
+  color: white;
+  text-align: center;
+}
+
+#main{
+  background-color: rgb(202, 240, 248);
+  text-align: right;
+  margin: auto;
+  width: fit-content;
+  border-radius: 15px;
+  overflow: auto;
+  padding: 25px;
+  line-height: 27px;
+}
+
+
+
+#user-forum{
+text-align: center;
+margin: 14%;
+text-overflow: ellipsis;
+}
+
+    #user-box{
+      white-space: unset;
+    }
+
+
+
+
+/*Member Section*/
+#member-sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height:45%;
+  width: 45%;
+}
+
+  .member-box{
+    width: 75%;
+    height: fit-content;
+    background-color: #F77976;
+    border-radius: 25px;
+    margin: 0 5%;
+  }

@@ -1,0 +1,147 @@
+<!-- 
+  Milestone-1 
+  ver. 1 
+  Joshua W., Noah R., Brydon J.
+
+  register.html
+    this page contains a html form that gathers all the necessary user input to register a new user and add that user to our users sql table
+    data includes: first name, last name, username, password, email, address, city, state and zip
+    this data is passed to the registerHandler.php script
+-->
+
+
+
+<!DOCTYPE html>
+<html id="index">
+  <head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+  </head>
+
+  <body>
+
+    <header>
+        <div id="header-title">
+          <h1>Team Betelgeuse</h1>
+        </div>
+        <section id="header-subtitles">
+          <div class="nav-btn">
+            <h3><a href="register.html" alt="_blank"> Sign-Up </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="login.html"> Login </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="post.html"> Post </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="index.html"> Home </a></h3>
+          </div>
+        </section>
+        <div id="header-buttons"> 
+          <button id="night-btn" class="btn"> night mode </button>
+          <button id="day-btn" class="btn"> day mode </button>
+        </div>        
+      </header>
+
+    <section id="top">
+      <img class="displayed" src="https://media.istockphoto.com/vectors/female-office-worker-vector-id165967112?k=6&m=165967112&s=612x612&w=0&h=8CjIrtKXJAOwYgSV15eCLvfMfPgd8sd0oY7F96gOZZo=" alt="happy woman using a computer">
+      <hr>
+      <h1>WELCOME</h1>
+      <p>Please Register for an account</p>
+    </section>
+    
+    <section id="main">
+      <form action="src/php/registerHandler.php" method="POST">
+        <label for="FirstName">First Name</label>
+        <input type="text" name="FirstName" id="FirstName" required pattern="[a-ZA-Z]+"> <br>
+        <label for="LastName">Last Name</label>
+        <input type="text" name="LastName" id="LastName" required pattern="[a-zA-Z]+">
+        <hr>
+
+        <label for="Username">Username</label>
+        <input type="text" name="Username" id="Username" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+"> <br>
+        <label for="Password">Password</label>
+        <input type="password" name="Password" id="Password" required minlength="8" maxlength="15">
+        <hr>
+
+        <label for="Email">Email</label>
+        <input type="email" name="Email" id="Email" required>
+        <hr>
+
+        <!--Form Data for users address, city, state, country, and zip code-->
+        <label for="Address">Address (optional)</label>
+        <input type="text" name="Address" id="Address"> <br>
+        <label for="City">City (optional)</label>
+        <input type="text" name="City" id="City"><br>
+        <label for="State">State (optional)</label>
+        <select name="State" id="State">
+          <option value=" "> </option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>	<br>
+        <label for="Zipcode">Zipcode (optional)</label>
+        <input type="text" name="Zipcode" id="Zipcode" minlength="5" maxlength="5" pattern="[0-9]+"> <br>
+        <label for="Country">Country (optional)</label>
+        <input type="text" name="Country" id="Country"><br>
+
+        <label for="Role">Select Role:</label>
+        <input type="radio" name="Role" value="Administrator">Administrator
+        <input type="radio" name="Role" value="User" checked>User
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+    
+  
+  </body>
+</html>

@@ -1,0 +1,161 @@
+/* 
+Milestone-1 
+ver. 1 
+Joshua W., Noah R., Brydon J.
+
+
+  * styling for post cards and post containers
+*/
+
+
+
+/* contains all of the individual post cards */
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html body{
+  height: 100%;
+  justify-content: center;
+}
+
+.outer_posts_container{
+  display: flex;
+  justify-content: center;
+}
+
+.inner_posts_container{
+  font-family: 'Montserrat', sans-serif;
+  width: 100vw;
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+  /* contains the entire post card */
+  .post_wrapper{
+    display: block;
+    text-align: center;
+    width: 90%;
+    height: 600px;
+    margin: 30px 10px 0px 10px;
+    /* box-shadow: h-offset v-offset blur spread color */
+    box-shadow: 0px 0px 30px -12px grey;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border-radius: 14px;
+  }
+
+
+    .post_wrapper:hover{
+      box-shadow: 0px 0px 30px -12px black;
+    }
+  
+  .inner_posts_container--art .post_card_image{
+    background: linear-gradient(to bottom right, white, #F77976);
+    height: 200px;
+  }
+
+  .inner_posts_container--science .post_card_image{
+    background: linear-gradient(to bottom right, white, #ffaa00b9);
+    height: 200px;
+  }
+
+  .inner_posts_container--business .post_card_image{
+    background: linear-gradient(to bottom right, white, #52e3e1b4);
+    height: 200px;
+  }
+
+  .inner_posts_container--travel .post_card_image{
+    background: linear-gradient(to bottom right, white, #9336fdaf);
+    height: 200px;
+  }
+
+  .post_card_image img{
+    width: 200px;
+  }
+  
+  .post_title_and_content{
+    background: white;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+  }
+
+  .post_card_postID{
+    font-size: 10px;
+  }
+
+  .post_card_postedBY{
+    font-size: 10px;
+  }
+
+  .post_card_title{
+    font-size: 30px;
+    font-weight: 700;
+    overflow: auto;
+    height: fit-content;
+    width: 100%;
+    padding: 3px 10px 3px 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 0px auto 8px auto;
+  }
+  
+  .post_card_content{
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    height: 100%;
+  }
+  
+  .post_card_category{
+    height: 80px;
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px;
+    z-index: 9999;
+  }
+
+  .inner_posts_container--art .post_card_category{
+    background: linear-gradient(to bottom right, white, #F77976);
+  }
+
+  .inner_posts_container--science .post_card_category{
+    background: linear-gradient(to bottom right, white, #ffaa00b9);
+  }
+
+  .inner_posts_container--business .post_card_category{
+    background: linear-gradient(to bottom right, white, #52e3e1b4);
+  }
+
+  .inner_posts_container--travel .post_card_category{
+    background: linear-gradient(to bottom right, white, #9336fdaf);
+  }
+
+
+  /* ajust sizes of objects on screen as screen passes 321 px */
+  @media screen and (min-width:321px){
+    /* adjust size of post card as screen grows */
+    .post_wrapper{
+      width: calc(289px + (100vw - 321px)*.12);
+    }
+  }
+
+  /* stop adjusting sizes at 991 px */
+  @media screen and (min-width:991px){
+    /* card stops growing when we reach 991 px screen size */
+    .post_wrapper{
+      width: 370px;
+    }
+  }

@@ -1,0 +1,35 @@
+/****** Object:  Table [dbo].[comments]    Script Date: 10/10/2020 11:04:17 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[comments](
+	[COMMENT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[POST_ID] [int] NOT NULL,
+	[COMMENT_TEXT] [nchar](10) NOT NULL,
+	[POSTED_DATE] [timestamp] NOT NULL,
+	[POSTED_BY] [int] NOT NULL,
+	[UPDATED_DATE] [time](7) NULL,
+	[UPDATED_BY] [int] NULL,
+	[DELETED_FLAG] [nchar](10) NOT NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[comments] ADD  CONSTRAINT [DF_comments_DELETED_FLAG]  DEFAULT (N'n') FOR [DELETED_FLAG]
+GO
+
+ALTER TABLE [dbo].[comments]  WITH CHECK ADD FOREIGN KEY([POST_ID])
+REFERENCES [dbo].[postsDB] ([POST_ID])
+GO
+
+ALTER TABLE [dbo].[comments]  WITH CHECK ADD FOREIGN KEY([POSTED_BY])
+REFERENCES [dbo].[usersDB] ([USER_ID])
+GO
+
+ALTER TABLE [dbo].[comments]  WITH CHECK ADD FOREIGN KEY([UPDATED_BY])
+REFERENCES [dbo].[usersDB] ([USER_ID])
+GO
+
+

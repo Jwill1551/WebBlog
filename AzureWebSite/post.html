@@ -1,0 +1,66 @@
+﻿<!-- 
+  Milestone-1 
+  ver. 1 
+  Joshua W., Noah R., Brydon J.
+
+  post.html
+    this page contains a html for that is designed to gather user input to create a new blog post
+    this includes: blog post title, blog post content
+    This data is passed to the postHandler.php script
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <title>Write Post</title>
+</head>
+<body>
+  <header>
+        <div id="header-title">
+          <h1>Team Betelgeuse</h1>
+        </div>
+        <section id="header-subtitles">
+          <div class="nav-btn">
+            <h3><a href="register.html" alt="_blank"> Sign-Up </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="login.html"> Login </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="post.html"> Post </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="index.html"> Home </a></h3>
+          </div>
+        </section>
+        <div id="header-buttons"> 
+          <button id="night-btn" class="btn"> night mode </button>
+          <button id="day-btn" class="btn"> day mode </button>
+        </div>        
+      </header>
+
+  <div id="user-forum">
+    <form action="src/php/postHandler.php" method="POST" id="user-box">
+      <br>
+      <label for="postTitle">Create a Title for your post!</label>
+      <input type="text" id="postTitle" name="postTitle">
+      <div id="select-categoty">
+          <select name="category">
+              <option value="art">Art</option>
+              <option value="science">Science</option>
+              <option value="business">Business</option>
+              <option value="travel">Travel</option>
+          </select>
+      </div>
+      <div id="post-Header"><label for="blogPost">Please enter your post here:</label></div>
+      <textarea name="blogPost" id="blogPost" cols="30" rows="10"></textarea>
+      <input type="submit" name="submit" value="Submit!" />
+    </form>
+  </div>
+  
+</body>
+</html>

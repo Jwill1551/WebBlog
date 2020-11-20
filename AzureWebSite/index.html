@@ -1,0 +1,158 @@
+﻿<!-- 
+  Milestone-1 
+  ver. 1 
+  Joshua W., Noah R., Brydon J.
+
+  Project overview:
+    create a fully functional blogging website
+
+  index.html
+    initial landing page for milestone project.
+    This page will have a header which contains buttons to: login, register, search, write blogs
+    Eventually, this page will also contain a few featured blog post for display and quick access
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/src/css/style.css">
+      <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    
+      <title>CST-126 | Home </title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <div id="header-title">
+          <h1>Team Betelgeuse</h1>
+        </div>
+        <section id="header-subtitles">
+          <div class="nav-btn">
+            <h3><a href="register.html" alt="_blank"> Sign-Up </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="login.html"> Login </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="post.html"> Post </a></h3>
+          </div>
+          <div class="nav-btn">
+            <h3><a href="index.html"> Home </a></h3>
+          </div>
+        </section>
+        <div id="header-buttons"> 
+          <button id="night-btn" class="btn"> night mode </button>
+          <button id="day-btn" class="btn"> day mode </button>
+        </div>        
+      </header>
+
+      <h1 id="body-title"> Welcome To Our Website! </h1>
+
+      <div id="content">
+        <div id="tool-box" class="box">
+          <h2 id="box-title" >Tools/Skills:</h2>
+          <p>This application was created using the following: </p>
+          <ul id="skill-list" class="box-list">
+            <li class="list-items"> HTML/CSS </li>
+            <li class="list-items"> PHP </li>
+            <li class="list-items"> MySQL </li>
+            <li class="list-items"> jQuery </li>
+          </ul>
+        </div>
+
+        <div id="tm-box" class="box">
+          <h2 id="box-title" >Team Members</h2>
+          <p> Follow the links below to learn more about our team members! :-)</p>
+          <ul id="team-list" class="box-list">
+            <li class="list-items"><a href="#">Joshua</a></li>
+            <li class="list-items"><a href="#">Noah</a></li>
+            <li class="list-items"><a href="#">Brydon</a></li>
+          </ul>
+        </div>
+
+        <div id="goal-box" class="box">
+          <h2 id="box-title" >Goal:</h2>
+          <p> Create a full-scale application that utilzes both the frontend and backend of web development. </p>
+        </div>
+
+      </div>
+      
+      <div id="content">
+        <a href="src/php/browseArtPosts.php">
+          <div id="art-posts-box" class="box blog_category_box">
+            <h2 id="box-title" >Art Blog Posts</h2>
+            <p> View art blog posts </p>
+          </div>
+        </a>
+
+        <a href="src/php/browseSciencePosts.php">
+          <div id="science-posts-box" class="box blog_category_box">
+            <h2 id="box-title" >Science Blog Posts</h2>
+            <p> View science blog posts </p>
+          </div>
+          
+        </a>
+
+        <a href="src/php/browseBusinessPosts.php">
+          <div id="business-posts-box" class="box blog_category_box">
+            <h2 id="box-title" >Business Blog Posts</h2>
+            <p> View business blog posts </p>
+          </div>
+        </a>
+
+        <a href="src/php/browseTravelPosts.php">
+          <div id="travel-posts-box" class="box blog_category_box">
+            <h2 id="box-title" >Travel Blog Posts</h2>
+            <p> View travel blog posts </p>
+          </div>
+        </a>
+      </div>
+
+      <div> 
+        <h4>Administrative Tools:</h4>
+        <form action="src/php/deletePostHandler.php" method="POST">
+          <label for="deleteBlog">Enter ID of post to Delete</label>
+          <input type="text" name="deleteBlog" id="deleteBlog">
+          <input type="submit" value="Submit">
+        </form>
+        
+        <form action="src/php/deleteUserHandler.php" method = "POST">
+          <label for = "deleteUser">Enter ID of user to delete</label>
+          <input type = "text" name="deleteUser" id = "deleteUser">
+          <input type="submit" value="Submit">
+        </form>
+
+        <form action="#" method = "POST">
+          <label for = "updatePostID">Update Post (coming soon)</label>
+          <input type = "text" name="updatePostID" id = "updatePostID">
+          <input type="submit" value="Submit">
+        </form>
+
+        <form action="#" method = "POST">
+          <label for = "getUserDetailsID">Get User Details (coming soon)</label>
+          <input type = "text" name="getUserDetailsID" id = "getUserDetailsID">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+      
+      <div class="push"></div>
+    <!-- close wrapper -->
+    </div>
+
+
+
+    <footer class="footer"></footer>
+        
+    <script src="script.js"></script>
+  </body>
+</html>
