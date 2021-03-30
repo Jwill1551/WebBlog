@@ -14,7 +14,9 @@ This application was created using the following tools:
 - The ability to delete and add content 
 - The ability to create a fourm and delete one
 - A mobile resposnive site 
-- Transitions & Animations 
+- Transitions & Animations
+- User registration and login 
+- Viewing and liking user fourms
 
 ## Content / References 
 Below is a an example of our sites home page: 
